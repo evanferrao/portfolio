@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cat Gallery - Evan Ferrao</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            /* Cat slideshow styles */
+            .slideshow-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 20px auto;
+                max-width: 800px;
+            }
+            
+            .slideshow {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20px 0;
+                width: 100%;
+            }
+            
+            .slideshow img {
+                width: 400px;
+                height: 400px;
+                object-fit: cover;
+                border-radius: 10px;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+            }
+            
+            .slideshow button {
+                background-color: rgba(255, 255, 255, 0.2);
+                color: white;
+                border: none;
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                margin: 0 15px;
+                cursor: pointer;
+                border-radius: 50%;
+            }
+            
+            .slideshow button:hover {
+                background-color: #f1c40f;
+                color: black;
+            }
+            
+            .cat-info {
+                background-color: rgba(255, 255, 255, 0.2);
+                padding: 15px;
+                border-radius: 10px;
+                max-width: 500px;
+                margin: 20px auto;
+                text-align: center;
+                color: white;
+            }
+            
+            .cat-info h3 {
+                color: #f1c40f;
+                margin-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Cat Gallery</h1>
+        </header>
+
+        <!-- Navbar with Social Icons -->
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="ContactMe.html">Contact Me</a></li>
+                <li><a href="Cats.html">Cats</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://github.com/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/github.png" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://twitter.com/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/twitter.png" alt="Twitter"></a>
+                <a href="https://www.facebook.com//u/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/facebook.png" alt="Facebook"></a>
+            </div>
+        </nav>
+
+        <div class="fullpage-section">
+            <div class="fullpage-content">
+                <h2>Cat Slideshow</h2>
+                <p>Enjoy this collection of adorable cat pictures. The slideshow automatically changes every 5 seconds, or you can use the buttons to navigate manually.</p>
+                
+                <div class="slideshow-container">
+                    <div class="slideshow">
+                        <button id="previousBtn">&lt;</button>
+                        <img id="catImage" src="https://placekitten.com/400/400" alt="Random Cat">
+                        <button id="nextBtn">&gt;</button>
+                    </div>
+                    
+                    <div class="cat-info">
+                        <h3 id="catTitle">Fluffy Cat</h3>
+                        <p id="catDescription">This adorable kitty loves to play and cuddle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 My Portfolio | Evan Ferrao</p>
+        </footer>
+
+        <script>
+            // Array of cat images and their details
+            const cats = [
+                {
+                    image: 'https://placekitten.com/400/400',
+                    title: 'Fluffy Cat',
+                    description: 'This adorable kitty loves to play and cuddle.'
+                },
+                {
+                    image: 'https://placekitten.com/401/401',
+                    title: 'Sleepy Kitty',
+                    description: 'This cat can sleep for 18 hours a day!'
+                },
+                {
+                    image: 'https://placekitten.com/402/402',
+                    title: 'Curious Cat',
+                    description: 'Always exploring and getting into mischief.'
+                },
+                {
+                    image: 'https://placekitten.com/403/403',
+                    title: 'Grumpy Cat',
+                    description: 'Not a morning cat. Needs coffee before interaction.'
+                },
+                {
+                    image: 'https://placekitten.com/404/404',
+                    title: 'Playful Kitten',
+                    description: 'Endless energy and loves chasing toys around the house.'
+                }
+            ];
+            
+            let currentIndex = 0;
+            
+            const previousBtn = document.getElementById('previousBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const catImage = document.getElementById('catImage');
+            const catTitle = document.getElementById('catTitle');
+            const catDescription = document.getElementById('catDescription');
+            
+            // Function to update the displayed cat
+            function updateCat() {
+                const cat = cats[currentIndex];
+                catImage.src = cat.image;
+                catTitle.textContent = cat.title;
+                catDescription.textContent = cat.description;
+            }
+            
+            // Event listeners for the buttons
+            previousBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + cats.length) % cats.length;
+                updateCat();
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % cats.length;
+                updateCat();
+            });
+            
+            // Auto slideshow
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % cats.length;
+                updateCat();
+            }, 5000); // 5000ms = 5 seconds
+        </script>
+    </body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume - Evan Ferrao</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Resume-specific styles */
+      .resume-container {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+      }
+
+      .resume-section {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: left;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .resume-section h2 {
+        color: #f1c40f;
+        border-bottom: 2px solid rgba(241, 196, 15, 0.3);
+        padding-bottom: 10px;
+        margin-top: 0;
+        font-size: 1.5rem;
+      }
+
+      .resume-section h3 {
+        color: #f1c40f;
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+      }
+
+      .resume-section p, 
+      .resume-section ul, 
+      .resume-section li {
+        color: white;
+        margin: 5px 0 15px 0;
+      }
+
+      /* Skill Bar */
+      .skill-bar {
+        background-color: rgba(255, 255, 255, 0.2);
+        height: 20px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        overflow: hidden;
+      }
+
+      .skill-level {
+        background-color: #f1c40f;
+        height: 100%;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Professional Resume</h1>
+    </header>
+
+    <!-- Navbar with Social Icons -->
+    <!-- Add the Contact Me button to the navbar -->
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="ContactMe.html">Contact Me</a></li>
+      </ul>
+      <div class="social-icons">
+        <a href="https://github.com/evanferrao" target="_blank"
+          ><img
+            src="https://img.icons8.com/ios/50/000000/github.png"
+            alt="GitHub"
+        /></a>
+        <a href="https://www.linkedin.com/evanferrao" target="_blank"
+          ><img
+            src="https://img.icons8.com/ios/50/000000/linkedin.png"
+            alt="LinkedIn"
+        /></a>
+        <a href="https://twitter.com/evanferrao" target="_blank"
+          ><img
+            src="https://img.icons8.com/ios/50/000000/twitter.png"
+            alt="Twitter"
+        /></a>
+        <a href="https://www.facebook.com//u/evanferrao" target="_blank"
+          ><img
+            src="https://img.icons8.com/ios/50/000000/facebook.png"
+            alt="Facebook"
+        /></a>
+      </div>
+    </nav>
+
+    <div class="resume-container">
+      <div class="resume-section">
+        <h2>Education</h2>
+        <div>
+          <h3>Bachelor of Engineering in Computer Science</h3>
+          <p><b>VIT</b> | 2023 - 2027</p>
+          <p>Ongoing, GPA: 9.03/10.0</p>
+        </div>
+        <div>
+          <h3>Highschool</h3>
+          <p><b>Queen Mary's High School</b> | 2014 - 2022</p>
+        </div>
+      </div>
+
+      <div class="resume-section">
+        <h2>Experience</h2>
+        <div>
+          <h3>crDroid Project Maintainer</h3>
+          <p><b>crDroid INC.</b> | 2020 - Present</p>
+          <ul>
+            <li>Maintainer for Redmi Note 9 in crDroidAndroid Project</li>
+            <li>Learnt a lot about android development</li>
+            <li>Implement CI/CD pipelines for automated builds of android</li>
+            <li>Attending to bug repoerts etc</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Web Developer</h3>
+          <p><b>XYZ Technology</b></p>
+          <ul>
+            <li>Developed responsive websites for various clients</li>
+            <li>Created interactive user interfaces using JavaScript</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Intern Developer</h3>
+          <p><b>XYZ Solutions</b> | Summer 2023</p>
+          <ul>
+            <li>Assisted in developing and maintaining html websites</li>
+            <li>Fixed bugs and implemented new features</li>
+            <li>Learned industry best practices for web development</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="resume-section">
+        <h2>Skills</h2>
+        <div>
+          <p><b>HTML/CSS</b></p>
+          <div class="skill-bar">
+            <div class="skill-level" style="width: 95%"></div>
+          </div>
+        </div>
+        <div>
+          <p><b>JavaScript</b></p>
+          <div class="skill-bar">
+            <div class="skill-level" style="width: 90%"></div>
+          </div>
+        </div>
+        <div>
+          <p><b>React</b></p>
+          <div class="skill-bar">
+            <div class="skill-level" style="width: 85%"></div>
+          </div>
+        </div>
+        <div>
+          <p><b>Node.js</b></p>
+          <div class="skill-bar">
+            <div class="skill-level" style="width: 80%"></div>
+          </div>
+        </div>
+        <div>
+          <p><b>Python</b></p>
+          <div class="skill-bar">
+            <div class="skill-level" style="width: 75%"></div>
+          </div>
+        </div>
+        <div>
+          <p><b>SQL</b></p>
+          <div class="skill-bar">
+            <div class="skill-level" style="width: 70%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="resume-section">
+        <h2>Certifications</h2>
+        <ul>
+          <li>AWS Certificate (2023)</li>
+          <li>Scrimba Web Developer Certification (2024)</li>
+          <li>GitHub Education Programme (2021)</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 My Portfolio | Evan Ferrao</p>
+    </footer>
+  </body>
+</html>

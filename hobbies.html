@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hobbies - Evan Ferrao</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            /* Hobby-specific styles */
+            .hobby-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                padding: 20px;
+                max-width: 800px;
+                margin: 30px auto;
+            }
+
+            .hobby-item {
+                display: flex;
+                background-color: rgba(255, 255, 255, 0.2);
+                border-radius: 10px;
+                overflow: hidden;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .hobby-item:nth-child(odd) {
+                flex-direction: row-reverse;
+            }
+
+            .hobby-item:nth-child(even) {
+                flex-direction: row;
+            }
+
+            .hobby-item .img-container {
+                flex: 0 0 40%;
+                overflow: hidden;
+            }
+
+            .hobby-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .hobby-content {
+                flex: 1;
+                padding: 30px;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .hobby-item h3 {
+                color: #f1c40f;
+                margin-top: 0;
+                margin-bottom: 15px;
+                font-size: 1.6rem;
+            }
+
+            .hobby-item p {
+                color: white;
+                line-height: 1.6;
+                margin: 0;
+                font-size: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>My Hobbies & Interests</h1>
+        </header>
+
+        <!-- Navbar with Social Icons -->
+        <!-- Add the Contact Me button to the navbar -->
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="ContactMe.html">Contact Me</a></li>
+    </ul>
+    <div class="social-icons">
+        <a href="https://github.com/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/github.png" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://twitter.com/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/twitter.png" alt="Twitter"></a>
+        <a href="https://www.facebook.com//u/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/facebook.png" alt="Facebook"></a>
+    </div>
+</nav>
+
+        <div class="hobby-grid">
+            <div class="hobby-item">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Coding">
+                </div>
+                <div class="hobby-content">
+                    <h3>Coding & Programming</h3>
+                    <p>I enjoy spending my free time working on personal coding projects and learning new programming languages. Currently, I'm exploring machine learning and AI applications. This passion for coding not only enhances my technical skills but also allows me to create solutions to real-world problems.</p>
+                </div>
+            </div>
+
+            <div class="hobby-item">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f" alt="Gaming">
+                </div>
+                <div class="hobby-content">
+                    <h3>Gaming</h3>
+                    <p>Gaming has always been a passion of mine. I enjoy both competitive multiplayer games and immersive single-player experiences. My favorite genres include strategy, RPGs, and simulation games. Gaming helps me relax while also improving my problem-solving abilities and strategic thinking.</p>
+                </div>
+            </div>
+
+            <div class="hobby-item">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1546608235-d0490a2f479a" alt="Photography">
+                </div>
+                <div class="hobby-content">
+                    <h3>Photography</h3>
+                    <p>I love capturing moments through photography. Urban landscapes and street photography are my specialties. I enjoy experimenting with different lighting conditions and editing techniques. Photography has taught me to appreciate the beauty in everyday scenes and to pay attention to details that might otherwise go unnoticed.</p>
+                </div>
+            </div>
+
+            <div class="hobby-item">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1544511916-0148ccdeb877" alt="Reading">
+                </div>
+                <div class="hobby-content">
+                    <h3>Reading</h3>
+                    <p>I'm an avid reader with a particular interest in science fiction, technology, and philosophy books. Reading helps me relax and gain new perspectives on various topics. My favorite authors include Isaac Asimov, Neal Stephenson, and Yuval Noah Harari. I try to read at least one book per month to continuously expand my knowledge.</p>
+                </div>
+            </div>
+
+            <div class="hobby-item">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1596243532290-5b78dbcc3b9a" alt="Electronics">
+                </div>
+                <div class="hobby-content">
+                    <h3>Electronics Tinkering</h3>
+                    <p>I enjoy taking apart and fixing electronic devices, building small circuits, and working with microcontrollers like Arduino and Raspberry Pi for home automation projects. This hobby bridges the gap between software and hardware, allowing me to create tangible projects that interact with the physical world.</p>
+                </div>
+            </div>
+
+            <div class="hobby-item">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2" alt="Hiking">
+                </div>
+                <div class="hobby-content">
+                    <h3>Hiking & Outdoor Activities</h3>
+                    <p>On weekends, I often go hiking to disconnect from technology and enjoy nature. It's a great way to clear my mind and find inspiration for new projects. I've explored several trails in nearby state parks and hope to tackle more challenging routes in the future. The physical activity combined with natural beauty provides the perfect balance to my tech-focused career.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 My Portfolio | Evan Ferrao</p>
+        </footer>
+    </body>
+</html>

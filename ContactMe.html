@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Me</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+
+            .fullpage-section form {
+                padding: 15px;
+            }
+            
+            .fullpage-section input, .fullpage-section textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border-radius: 5px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                background-color: rgba(255, 255, 255, 0.2);
+                color: white;
+            }
+            
+            .fullpage-section textarea {
+                min-height: 120px;
+                resize: vertical;
+            }
+            
+            .fullpage-section input::placeholder, 
+            .fullpage-section textarea::placeholder {
+                color: rgba(255, 255, 255, 0.7);
+            }
+            
+            .fullpage-section label {
+                color: white;
+                display: block;
+                margin-bottom: 5px;
+                text-align: left;
+                font-weight: bold;
+            }
+            
+            .fullpage-section input[type="submit"] {
+                background-color: #2ecc71;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                font-weight: bold;
+                width: auto;
+            }
+            
+            .fullpage-section input[type="reset"] {
+                background-color: #e74c3c;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                margin-left: 10px;
+                width: auto;
+            }
+            
+            .buttons {
+                text-align: center;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Contact Me</h1>
+        </header>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="ContactMe.html">Contact Me</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://github.com/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/github.png" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://twitter.com/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/twitter.png" alt="Twitter"></a>
+                <a href="https://www.facebook.com//u/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/facebook.png" alt="Facebook"></a>
+            </div>
+        </nav>
+
+        <div class="fullpage-section">
+            <div class="fullpage-content">
+                <h2>Contact Form</h2>
+                <form name="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Type your message here..." oninput="autoResizeTextarea(this)"></textarea>
+
+                    <div class="buttons">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 My Portfolio | Evan Ferrao</p>
+        </footer>
+
+        <script>
+            function autoResizeTextarea(element) {
+                element.style.height = "auto";
+                element.style.height = (element.scrollHeight) + "px";
+            }
+        </script>
+    </body>
+</html>

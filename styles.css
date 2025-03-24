@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6a1b91, #3498db); /* Adjusted gradient range */
+    text-align: center;
+    line-height: 1.6;
+    color: black;
+}
+
+header {
+    background-color: #3498db; /* Updated to match the lighter gradient */
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Simplified Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+}
+
+nav .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav .menu li {
+    margin: 0px 15px;
+}
+
+nav .menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+nav .menu li a:hover {
+    color: #f1c40f;
+}
+
+nav .social-icons {
+    display: flex;
+    align-items: center;
+}
+
+nav .social-icons a {
+    margin-left: 15px;
+}
+
+nav .social-icons img {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1);
+}
+
+/* Content Sections */
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.section h2 {
+    color: #9b59b6; /* Updated purple */
+    margin-top: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #3498db; /* Updated to match the lighter gradient */
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* Fullpage Sections */
+.fullpage-section {
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fullpage-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.fullpage-section h2 {
+    color: #f1c40f;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.fullpage-section h3 {
+    color: #f1c40f;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.fullpage-section p, .fullpage-section ul, .fullpage-section ol {
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.button-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.button-primary, .button-secondary {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button-primary {
+    background-color: #f1c40f;
+    color: black;
+}
+
+.button-secondary {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Projects Layout */
+.projects-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+    max-width: 1200px;
+    margin: 30px auto;
+}

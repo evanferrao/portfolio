@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects - Evan Ferrao</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            /* Project-specific styles */
+            /* Tags */
+            .tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin: 15px 0;
+            }
+
+            .tag {
+                background-color: #7ed6a5;
+                color: #333;
+                padding: 5px 10px;
+                border-radius: 25px;
+                font-size: 0.85rem;
+                border: 1px solid #66c796;
+            }
+
+            /* Project Cards */
+            .project-card {
+                background-color: rgba(255, 255, 255, 0.2);
+                border-radius: 10px;
+                overflow: hidden;
+                margin-bottom: 20px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .project-card img {
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+            }
+
+            .project-info {
+                padding: 20px;
+                text-align: left;
+            }
+
+            .project-info h3 {
+                color: #f1c40f;
+                margin-top: 0;
+                margin-bottom: 15px;
+                font-size: 1.3rem;
+            }
+
+            .project-info p {
+                color: white;
+                margin-bottom: 15px;
+            }
+
+            /* Project Buttons */
+            .project-info a {
+                color: white;
+                text-decoration: none;
+                padding: 5px 10px;
+                margin-right: 5px;
+                display: inline-block;
+                border-radius: 3px;
+            }
+
+            .project-info a:first-of-type {
+                background-color: #f1c40f;
+                color: #333;
+            }
+
+            .project-info a:last-of-type {
+                background-color: #3498db;
+            }
+
+            /* Projects Layout */
+            .projects-content {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                padding: 15px;
+                max-width: 1200px;
+                margin: 30px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>My Projects Portfolio</h1>
+        </header>
+
+        <!-- Navbar with Social Icons -->
+        <!-- Add the Contact Me button to the navbar -->
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="ContactMe.html">Contact Me</a></li>
+    </ul>
+    <div class="social-icons">
+        <a href="https://github.com/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/github.png" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://twitter.com/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/twitter.png" alt="Twitter"></a>
+        <a href="https://www.facebook.com//u/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/facebook.png" alt="Facebook"></a>
+    </div>
+</nav>
+
+        <div class="projects-content">
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Project 1">
+                <div class="project-info">
+                    <h3>E-commerce Platform</h3>
+                    <p>A full-featured e-commerce platform with product management, shopping cart, and payment integration.</p>
+                    <div class="tags">
+                        <span class="tag" data-category="frontend">React</span>
+                        <span class="tag" data-category="backend">Node.js</span>
+                        <span class="tag" data-category="database">MongoDB</span>
+                        <span class="tag" data-category="api">Stripe API</span>
+                    </div>
+                    <p><a href="#">View Project</a> <a href="#">GitHub Repo</a></p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Project 2">
+                <div class="project-info">
+                    <h3>Weather App</h3>
+                    <p>A real-time weather application that provides forecasts for any location worldwide using weather APIs.</p>
+                    <div class="tags">
+                        <span class="tag" data-category="frontend">JavaScript</span>
+                        <span class="tag" data-category="api">API Integration</span>
+                        <span class="tag" data-category="frontend">HTML/CSS</span>
+                        <span class="tag" data-category="design">Responsive Design</span>
+                    </div>
+                    <p><a href="#">View Project</a> <a href="#">GitHub Repo</a></p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="Project 3">
+                <div class="project-info">
+                    <h3>Task Management System</h3>
+                    <p>A collaborative task management tool with features like task assignment, deadlines, and progress tracking.</p>
+                    <div class="tags">
+                        <span class="tag" data-category="frontend">Vue.js</span>
+                        <span class="tag" data-category="backend">Firebase</span>
+                        <span class="tag" data-category="api">Authentication</span>
+                        <span class="tag" data-category="database">Real-time Database</span>
+                    </div>
+                    <p><a href="#">View Project</a> <a href="#">GitHub Repo</a></p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1517292987719-0369a794ec0f" alt="Project 4">
+                <div class="project-info">
+                    <h3>Portfolio Website</h3>
+                    <p>A responsive portfolio website template for creative professionals with customizable sections.</p>
+                    <div class="tags">
+                        <span class="tag" data-category="frontend">HTML5</span>
+                        <span class="tag" data-category="frontend">CSS3</span>
+                        <span class="tag" data-category="frontend">JavaScript</span>
+                        <span class="tag" data-category="design">Responsive Design</span>
+                    </div>
+                    <p><a href="#">View Project</a> <a href="#">GitHub Repo</a></p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1555421689-3f034debb7a6" alt="Project 5">
+                <div class="project-info">
+                    <h3>Blog CMS</h3>
+                    <p>A content management system for blogs with features like post creation, comments, and user management.</p>
+                    <div class="tags">
+                        <span class="tag" data-category="backend">PHP</span>
+                        <span class="tag" data-category="database">MySQL</span>
+                        <span class="tag" data-category="frontend">Bootstrap</span>
+                        <span class="tag" data-category="frontend">jQuery</span>
+                    </div>
+                    <p><a href="#">View Project</a> <a href="#">GitHub Repo</a></p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Project 6">
+                <div class="project-info">
+                    <h3>Chat Application</h3>
+                    <p>A real-time chat application with private messaging, group chats, and file sharing capabilities.</p>
+                    <div class="tags">
+                        <span class="tag" data-category="api">Socket.io</span>
+                        <span class="tag" data-category="backend">Express.js</span>
+                        <span class="tag" data-category="database">MongoDB</span>
+                        <span class="tag" data-category="api">Authentication</span>
+                    </div>
+                    <p><a href="#">View Project</a> <a href="#">GitHub Repo</a></p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 My Portfolio | Evan Ferrao</p>
+        </footer>
+    </body>
+</html>
