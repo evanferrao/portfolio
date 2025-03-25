@@ -65,37 +65,20 @@
         </style>
     </head>
     <body>
-        <header>
-            <h1>Cat Gallery</h1>
-        </header>
 
         <!-- Navbar with Social Icons -->
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="ContactMe.html">Contact Me</a></li>
-                <li><a href="Cats.html">Cats</a></li>
-            </ul>
-            <div class="social-icons">
-                <a href="https://github.com/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/github.png" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="LinkedIn"></a>
-                <a href="https://twitter.com/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/twitter.png" alt="Twitter"></a>
-                <a href="https://www.facebook.com//u/evanferrao" target="_blank"><img src="https://img.icons8.com/ios/50/000000/facebook.png" alt="Facebook"></a>
-            </div>
-        </nav>
+        <div id="navbar-placeholder"></div>
+        <script src="navbar.js"></script>
 
         <div class="fullpage-section">
             <div class="fullpage-content">
-                <h2>Cat Slideshow</h2>
+                <h2>Surprise! Heres a slideshow of cats!</h2>
                 <p>Enjoy this collection of adorable cat pictures. The slideshow automatically changes every 5 seconds, or you can use the buttons to navigate manually.</p>
                 
                 <div class="slideshow-container">
                     <div class="slideshow">
                         <button id="previousBtn">&lt;</button>
-                        <img id="catImage" src="https://placekitten.com/400/400" alt="Random Cat">
+                        <img id="catImage" src="src/cats/cat0.jpg" alt="Cat Image">
                         <button id="nextBtn">&gt;</button>
                     </div>
                     
@@ -115,29 +98,54 @@
             // Array of cat images and their details
             const cats = [
                 {
-                    image: 'https://placekitten.com/400/400',
+                    image: 'src/cats/cat0.jpg',
                     title: 'Fluffy Cat',
                     description: 'This adorable kitty loves to play and cuddle.'
                 },
                 {
-                    image: 'https://placekitten.com/401/401',
+                    image: 'src/cats/cat1.jpg',
                     title: 'Sleepy Kitty',
                     description: 'This cat can sleep for 18 hours a day!'
                 },
                 {
-                    image: 'https://placekitten.com/402/402',
+                    image: 'src/cats/cat2.jpg',
                     title: 'Curious Cat',
                     description: 'Always exploring and getting into mischief.'
                 },
                 {
-                    image: 'https://placekitten.com/403/403',
+                    image: 'src/cats/cat3.jpg',
                     title: 'Grumpy Cat',
                     description: 'Not a morning cat. Needs coffee before interaction.'
                 },
                 {
-                    image: 'https://placekitten.com/404/404',
+                    image: 'src/cats/cat4.jpg',
                     title: 'Playful Kitten',
                     description: 'Endless energy and loves chasing toys around the house.'
+                },
+                {
+                    image: 'src/cats/cat5.jpg',
+                    title: 'Adventurous Cat',
+                    description: 'Loves to explore new places and climb trees.'
+                },
+                {
+                    image: 'src/cats/cat6.jpg',
+                    title: 'Hungry Cat',
+                    description: 'Always looking for the next meal or treat.'
+                },
+                {
+                    image: 'src/cats/cat7.jpg',
+                    title: 'Relaxed Cat',
+                    description: 'Enjoys lounging in the sun and taking it easy.'
+                },
+                {
+                    image: 'src/cats/cat8.jpg',
+                    title: 'Playful Cat',
+                    description: 'Loves to play with toys and chase laser pointers.'
+                },
+                {
+                    image: 'src/cats/cat9.jpg',
+                    title: 'Majestic Cat',
+                    description: 'Has a regal presence and loves to be admired.'
                 }
             ];
             
