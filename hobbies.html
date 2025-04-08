@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hobbies - Evan Ferrao</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .hobby-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                padding: 20px;
+                max-width: 800px;
+                margin: 30px auto;
+            }
+
+            .hobby-item {
+                display: flex;
+                background-color: rgba(255, 255, 255, 0.2);
+                border-radius: 10px;
+                overflow: hidden;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .hobby-item:nth-child(odd) {
+                flex-direction: row-reverse;
+            }
+
+            .hobby-item:nth-child(even) {
+                flex-direction: row;
+            }
+
+            .hobby-item .img-container {
+                flex: 0 0 40%;
+                overflow: hidden;
+            }
+
+            .hobby-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .hobby-content {
+                flex: 1;
+                padding: 30px;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .hobby-item h3 {
+                color: #f1c40f;
+                margin-top: 0;
+                margin-bottom: 15px;
+                font-size: 1.6rem;
+            }
+
+            .hobby-item p {
+                color: white;
+                line-height: 1.6;
+                margin: 0;
+                font-size: 1rem;
+            }
+        </style>
+    </head>
+    
+<body>
+
+
+    <div id="navbar-placeholder"></div>
+        <script src="navbar.js"></script>
+
+    <div id="hobby-grid" class="hobby-grid">
+    </div>
+
+    <footer>
+        <p>© 2025 My Portfolio | Evan Ferrao</p>
+    </footer>
+
+    <script>
+        const hobbies = [
+            {
+                title: "Coding & Programming",
+                image: 'src/hobbies/coding.jpg',
+                description: "I enjoy spending my free time working on personal coding projects and learning new programming languages. Currently, I'm exploring machine learning and AI applications. This passion for coding not only enhances my technical skills but also allows me to create solutions to real-world problems."
+            },
+            {
+                title: "Gaming",
+                image: 'src/hobbies/gaming.jpg',
+                description: "Gaming has always been a passion of mine. I enjoy both competitive multiplayer games and immersive single-player experiences. My favorite genres include strategy, RPGs, and simulation games. Gaming helps me relax while also improving my problem-solving abilities and strategic thinking."
+            },
+            {
+                title: "Photography",
+                image: 'src/hobbies/photography.jpg',
+                description: "I love capturing moments through photography. Urban landscapes and street photography are my specialties. I enjoy experimenting with different lighting conditions and editing techniques. Photography has taught me to appreciate the beauty in everyday scenes and to pay attention to details that might otherwise go unnoticed."
+            },
+            {
+                title: "Reading",
+                image: 'src/hobbies/reading.jpg',
+                description: "I'm an avid reader with a particular interest in science fiction, technology, and philosophy books. Reading helps me relax and gain new perspectives on various topics. My favorite authors include Isaac Asimov, Neal Stephenson, and Yuval Noah Harari. I try to read at least one book per month to continuously expand my knowledge."
+            },
+            {
+                title: "Electronics Tinkering",
+                image: 'src/hobbies/electronicsTinkering.jpg',
+                description: "I enjoy taking apart and fixing electronic devices, building small circuits, and working with microcontrollers like Arduino and Raspberry Pi for home automation projects. This hobby bridges the gap between software and hardware, allowing me to create tangible projects that interact with the physical world."
+            },
+            {
+                title: "Hiking & Outdoor Activities",
+                image: 'src/hobbies/hiking.jpg',
+                description: "On weekends, I often go hiking to disconnect from technology and enjoy nature. It's a great way to clear my mind and find inspiration for new projects. I've explored several trails in nearby state parks and hope to tackle more challenging routes in the future. The physical activity combined with natural beauty provides the perfect balance to my tech-focused career."
+            }
+        ];
+        
+        function createHobbyItem(hobby, index) {
+            const hobbyItem = document.createElement('div');
+            hobbyItem.className = 'hobby-item';
+            
+            const imgContainer = document.createElement('div');
+            imgContainer.className = 'img-container';
+            
+            const img = document.createElement('img');
+            img.src = hobby.image;
+            img.alt = hobby.title;
+            imgContainer.appendChild(img);
+            
+            const hobbyContent = document.createElement('div');
+            hobbyContent.className = 'hobby-content';
+            
+            const title = document.createElement('h3');
+            title.textContent = hobby.title;
+            hobbyContent.appendChild(title);
+            
+            const description = document.createElement('p');
+            description.textContent = hobby.description;
+            hobbyContent.appendChild(description);
+            
+            hobbyItem.appendChild(imgContainer);
+            hobbyItem.appendChild(hobbyContent);
+            
+            return hobbyItem;
+        }
+        
+        function loadHobbies() {
+            const hobbyGrid = document.getElementById('hobby-grid');
+            
+            hobbyGrid.innerHTML = '';
+            
+            hobbies.forEach((hobby, index) => {
+                const hobbyItem = createHobbyItem(hobby, index);
+                hobbyGrid.appendChild(hobbyItem);
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', loadHobbies);
+    </script>
+</body>

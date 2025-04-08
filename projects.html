@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects - Evan Ferrao</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+
+            .tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin: 15px 0;
+            }
+
+            .tag {
+                background-color: #7ed6a5;
+                color: #333;
+                padding: 5px 10px;
+                border-radius: 25px;
+                font-size: 0.85rem;
+                border: 1px solid #66c796;
+            }
+
+            .project-card {
+                background-color: rgba(255, 255, 255, 0.2);
+                border-radius: 10px;
+                overflow: hidden;
+                margin-bottom: 20px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .project-card img {
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+            }
+
+            .project-info {
+                padding: 20px;
+                text-align: left;
+            }
+
+            .project-info h3 {
+                color: #f1c40f;
+                margin-top: 0;
+                margin-bottom: 15px;
+                font-size: 1.3rem;
+            }
+
+            .project-info p {
+                color: white;
+                margin-bottom: 15px;
+            }
+
+            /* Project Buttons */
+            .project-info a {
+                color: white;
+                text-decoration: none;
+                padding: 5px 10px;
+                margin-right: 5px;
+                display: inline-block;
+                border-radius: 3px;
+            }
+
+            .project-info a:first-of-type {
+                background-color: #f1c40f;
+                color: #333;
+            }
+
+            .project-info a:last-of-type {
+                background-color: #3498db;
+            }
+
+            /* Projects Layout */
+            .projects-content {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                padding: 15px;
+                max-width: 1200px;
+                margin: 30px auto;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="navbar-placeholder"></div>
+        <script src="navbar.js"></script>
+
+        <div id="projects-content" class="projects-content">
+        </div>
+
+        <footer>
+            <p>© 2025 My Portfolio | Evan Ferrao</p>
+        </footer>
+
+        <script>
+            const projects = [
+                {
+                    title: "Music Player/Downloader",
+                    image: "./src/projects/tidal-music-downloader.png",
+                    description: "A full-featured online music player and visualizer built using Tidal Hi-Fi API. It leverages cloudflare workers as its backend for a serverless infrastructure",
+                    tags: [
+                        { name: "React", category: "frontend" },
+                        { name: "Node.js", category: "backend" },
+                        { name: "Tailwind", category: "frontend" },
+                        { name: "Tidal API", category: "api" }
+                    ],
+                    demoLink: "https://music.evanferrao.win",
+                    repoLink: "https://github.com/evanferrao/tidal-music-downloader"
+                },
+                {
+                    title: "Year Progress Bot",
+                    image: "./src/projects/year-progress.png",
+                    description: "A serverless implementation of redl0tus/yearprogress. It sends the user regular notification about the percentage of the year completed. Uses github-actions with cronjobs.",
+                    tags: [
+                        { name: "bash", category: "frontend" },
+                        { name: "github-actions", category: "api" },
+                        { name: "cron", category: "frontend" },
+                        { name: "automation", category: "design" }
+                    ],
+                    demoLink: "https://telegram.dog/s/yearprogress",
+                    repoLink: "http://git.evanferrao.win/evanferrao/YearProgressNotifier"
+                },
+                {
+                    title: "Note Taking App",
+                    image: "./src/projects/notes.jpg",
+                    description: "A note taking app with features like task assignment, reminders, and checklists.",
+                    tags: [
+                        { name: "Flutter", category: "frontend" },
+                        { name: "Firebase", category: "backend" },
+                        { name: "Authentication", category: "api" },
+                        { name: "SQL Database", category: "database" }
+                    ],
+                    demoLink: "https://git.evanferrao.win/evanferrao/mynotes",
+                    repoLink: "https://git.evanferrao.win/evanferrao/mynotes"
+                },
+                {
+                    title: "Portfolio Website",
+                    image: "./src/projects/portfolio.png",
+                    description: "A responsive portfolio website.",
+                    tags: [
+                        { name: "HTML5", category: "frontend" },
+                        { name: "CSS3", category: "frontend" },
+                        { name: "JavaScript", category: "frontend" },
+                        { name: "Responsive Design", category: "design" }
+                    ],
+                    demoLink: "#",
+                    repoLink: "https://github.com/evanferrao/portfolio"
+                },
+            ];
+            
+            function createProjectCard(project) {
+                const projectCard = document.createElement('div');
+                projectCard.className = 'project-card';
+                
+                const img = document.createElement('img');
+                img.src = project.image;
+                img.alt = project.title;
+                projectCard.appendChild(img);
+                
+                const projectInfo = document.createElement('div');
+                projectInfo.className = 'project-info';
+                
+                const title = document.createElement('h3');
+                title.textContent = project.title;
+                projectInfo.appendChild(title);
+                
+                const description = document.createElement('p');
+                description.textContent = project.description;
+                projectInfo.appendChild(description);
+                
+                // Create tags container
+                const tagsContainer = document.createElement('div');
+                tagsContainer.className = 'tags';
+                
+                project.tags.forEach(tag => {
+                    const tagElement = document.createElement('span');
+                    tagElement.className = 'tag';
+                    tagElement.dataset.category = tag.category;
+                    tagElement.textContent = tag.name;
+                    tagsContainer.appendChild(tagElement);
+                });
+                
+                projectInfo.appendChild(tagsContainer);
+                
+                const links = document.createElement('p');
+                
+                const demoLink = document.createElement('a');
+                demoLink.href = project.demoLink;
+                demoLink.textContent = 'View Project';
+                links.appendChild(demoLink);
+                
+                links.appendChild(document.createTextNode(' '));
+                
+                const repoLink = document.createElement('a');
+                repoLink.href = project.repoLink;
+                repoLink.textContent = 'GitHub Repo';
+                links.appendChild(repoLink);
+                
+                projectInfo.appendChild(links);
+                
+                projectCard.appendChild(projectInfo);
+                
+                return projectCard;
+            }
+            
+            function loadProjects() {
+                const projectsContainer = document.getElementById('projects-content');
+                
+                projectsContainer.innerHTML = '';
+                
+                projects.forEach(project => {
+                    const projectCard = createProjectCard(project);
+                    projectsContainer.appendChild(projectCard);
+                });
+            }
+            
+            document.addEventListener('DOMContentLoaded', loadProjects);
+        </script>
+    </body>
+</html>

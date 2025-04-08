@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cat Gallery - Evan Ferrao</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .slideshow-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 20px auto;
+                max-width: 800px;
+            }
+            
+            .slideshow {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20px 0;
+                width: 100%;
+            }
+            
+            .slideshow img {
+                width: 400px;
+                height: 400px;
+                object-fit: cover;
+                border-radius: 10px;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+            }
+            
+            .slideshow button {
+                background-color: rgba(255, 255, 255, 0.2);
+                color: white;
+                border: none;
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                margin: 0 15px;
+                cursor: pointer;
+                border-radius: 50%;
+            }
+            
+            .slideshow button:hover {
+                background-color: #f1c40f;
+                color: black;
+            }
+            
+            .cat-info {
+                background-color: rgba(255, 255, 255, 0.2);
+                padding: 15px;
+                border-radius: 10px;
+                max-width: 500px;
+                margin: 20px auto;
+                text-align: center;
+                color: white;
+            }
+            
+            .cat-info h3 {
+                color: #f1c40f;
+                margin-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <div id="navbar-placeholder"></div>
+        <script src="navbar.js"></script>
+
+        <div class="fullpage-section">
+            <div class="fullpage-content">
+                <h2>Surprise! Heres a slideshow of cats!</h2>
+                <p>Enjoy this collection of adorable cat pictures. The slideshow automatically changes every 5 seconds, or you can use the buttons to navigate manually.</p>
+                
+                <div class="slideshow-container">
+                    <div class="slideshow">
+                        <button id="previousBtn">&lt;</button>
+                        <img id="catImage" src="src/cats/cat0.jpg" alt="Cat Image">
+                        <button id="nextBtn">&gt;</button>
+                    </div>
+                    
+                    <div class="cat-info">
+                        <h3 id="catTitle">Fluffy Cat</h3>
+                        <p id="catDescription">This adorable kitty loves to play and cuddle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 My Portfolio | Evan Ferrao</p>
+        </footer>
+
+        <script>
+            const cats = [
+                {
+                    image: 'src/cats/cat0.jpg',
+                    title: 'Fluffy Cat',
+                    description: 'This adorable kitty loves to play and cuddle.'
+                },
+                {
+                    image: 'src/cats/cat1.jpg',
+                    title: 'Sleepy Kitty',
+                    description: 'This cat can sleep for 18 hours a day!'
+                },
+                {
+                    image: 'src/cats/cat2.jpg',
+                    title: 'Curious Cat',
+                    description: 'Always exploring and getting into mischief.'
+                },
+                {
+                    image: 'src/cats/cat3.jpg',
+                    title: 'Grumpy Cat',
+                    description: 'Not a morning cat. Needs coffee before interaction.'
+                },
+                {
+                    image: 'src/cats/cat4.jpg',
+                    title: 'Playful Kitten',
+                    description: 'Endless energy and loves chasing toys around the house.'
+                },
+                {
+                    image: 'src/cats/cat5.jpg',
+                    title: 'Adventurous Cat',
+                    description: 'Loves to explore new places and climb trees.'
+                },
+                {
+                    image: 'src/cats/cat6.jpg',
+                    title: 'Hungry Cat',
+                    description: 'Always looking for the next meal or treat.'
+                },
+                {
+                    image: 'src/cats/cat7.jpg',
+                    title: 'Relaxed Cat',
+                    description: 'Enjoys lounging in the sun and taking it easy.'
+                },
+                {
+                    image: 'src/cats/cat8.jpg',
+                    title: 'Playful Cat',
+                    description: 'Loves to play with toys and chase laser pointers.'
+                },
+                {
+                    image: 'src/cats/cat9.jpg',
+                    title: 'Majestic Cat',
+                    description: 'Has a regal presence and loves to be admired.'
+                }
+            ];
+            
+            let currentIndex = 0;
+            
+            const previousBtn = document.getElementById('previousBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const catImage = document.getElementById('catImage');
+            const catTitle = document.getElementById('catTitle');
+            const catDescription = document.getElementById('catDescription');
+            
+            function updateCat() {
+                const cat = cats[currentIndex];
+                catImage.src = cat.image;
+                catTitle.textContent = cat.title;
+                catDescription.textContent = cat.description;
+            }
+            
+            previousBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + cats.length) % cats.length;
+                updateCat();
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % cats.length;
+                updateCat();
+            });
+            
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % cats.length;
+                updateCat();
+            }, 5000); 
+        </script>
+    </body>
+</html>
